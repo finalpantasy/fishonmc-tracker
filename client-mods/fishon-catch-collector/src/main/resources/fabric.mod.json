@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "fishon-catch-collector",
+  "version": "${version}",
+  "name": "FishOn Catch Collector",
+  "description": "Records structured personal FishOn catches and adds local observed catchbook statistics to fish tooltips.",
+  "authors": [
+    "finalpantasy"
+  ],
+  "contact": {
+    "homepage": "https://github.com/finalpantasy/fishon-catch-collector",
+    "sources": "https://github.com/finalpantasy/fishon-catch-collector",
+    "issues": "https://github.com/finalpantasy/fishon-catch-collector/issues"
+  },
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "net.finalpantasy.fishoncollector.FishOnCatchCollectorClient"
+    ]
+  },
+  "mixins": [
+    {
+      "config": "fishon-catch-collector.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.19.3",
+    "fabric-api": ">=0.141.6+1.21.11",
+    "fishonmcextras": "0.3.7+1.21.11",
+    "minecraft": "~1.21.11",
+    "java": ">=21"
+  }
+}

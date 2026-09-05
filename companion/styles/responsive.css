@@ -1,0 +1,145 @@
+@media (max-width: 1250px) {
+  .session-kpi-grid { grid-template-columns: repeat(4, minmax(110px, 1fr)); }
+  .dashboard-timeline, .dashboard-location-chart { grid-column: span 6; }
+  .catch-analytics-grid { grid-template-columns: repeat(2, minmax(220px, 1fr)); }
+  .catch-stat-strip { grid-template-columns: repeat(4, minmax(120px, 1fr)); }
+  .catch-filter-bar { grid-template-columns: repeat(4, minmax(130px, 1fr)); }
+  .my-catches-row { grid-template-columns: minmax(230px, 1fr) minmax(390px, 1.5fr); }
+  .catch-row-stats, .catch-row-actions { grid-column: span 1; }
+  .catch-row-actions { grid-template-columns: repeat(2, max-content); justify-content: end; }
+  .dashboard-actions, .dashboard-quests { grid-column: span 6; }
+  .dashboard-profile, .dashboard-stats, .dashboard-breakdowns { grid-column: 1 / -1; }
+  .filter-panel { grid-template-columns: minmax(250px, .8fr) 1.7fr; }
+  .filter-panel .reset-button { position: absolute; right: 11px; top: 11px; min-height: 32px; }
+  .filter-grid { padding-top: 38px; }
+  .compendium-layout { grid-template-columns: minmax(350px, .7fr) 1.3fr; height: calc(100% - 154px); }
+  .locations-grid { grid-template-columns: repeat(3, minmax(220px, 1fr)); }
+  .setup-recommendation-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .bait-match-grid { grid-template-columns: 1fr; }
+  .progress-toolbar { grid-template-columns: 1fr auto; }
+  .progress-toolbar .backup-actions { grid-column: 1 / -1; }
+  .progress-layout { grid-template-columns: 1fr; overflow: auto; }
+  .location-progress { min-height: 480px; }
+  .progress-side { grid-template-columns: repeat(3, 1fr); grid-template-rows: auto; }
+}
+
+@media (max-width: 980px) {
+  .mc-button, .mc-input, .mc-select, textarea { min-height: 44px; }
+  .my-catches-row .mc-button { min-height: 44px; }
+  .catch-dialog .mc-button, .catch-dialog .mc-input, .catch-dialog .mc-select, .catch-dialog textarea { min-height: 44px; }
+  .catch-dialog-layout { grid-template-columns: 1fr; overflow-y: auto; }
+  .catch-form { overflow: visible; border-right: 0; border-bottom: 3px solid #050b0e; }
+  .catch-history { max-height: 430px; }
+  .live-status { grid-template-columns: 58px minmax(0, 1fr); }
+  .live-status > .mc-button { grid-column: 1 / -1; justify-self: start; }
+  .dashboard-grid { grid-template-columns: 1fr; }
+  .dashboard-card { grid-column: 1 !important; }
+  .dashboard-recent-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .dashboard-personal-progress { grid-template-columns: minmax(220px, .8fr) 1fr; }
+  body { overflow: auto; overflow-x: hidden; }
+  .app-shell { width: 100%; max-width: 100%; min-width: 0; min-height: 100vh; height: auto; overflow-x: hidden; grid-template-rows: 58px 56px auto 34px; }
+  .app-main { overflow: visible; min-height: calc(100vh - 148px); }
+  .tab-panel { height: auto; min-height: calc(100vh - 178px); }
+  .tab-bar { width: 100%; max-width: 100vw; min-width: 0; grid-template-columns: repeat(7, minmax(145px, 1fr)); overscroll-behavior-inline: contain; }
+  .header-meta { display: none; }
+  .filter-panel { grid-template-columns: 1fr; }
+  .filter-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); padding-top: 0; }
+  .filter-panel .reset-button { position: static; justify-self: end; }
+  .compendium-layout { grid-template-columns: 1fr; height: auto; }
+  .fish-browser { min-height: 470px; height: 470px; }
+  .fish-detail { overflow: visible; }
+  .guide-layout { grid-template-columns: 1fr; height: auto; }
+  .guide-rail { max-height: 330px; }
+  .guide-content { overflow: visible; }
+  .locations-grid { grid-template-columns: repeat(2, minmax(220px, 1fr)); height: auto; }
+  .setup-page { height: auto; }
+  .setup-detail-layout { grid-template-columns: 1fr; }
+  .setup-goal-finder .setup-controls { grid-template-columns: 1fr; }
+  .setup-goal-finder .mc-select { min-height: 44px; }
+  .setup-bait-choices { grid-template-columns: 1fr 1fr; }
+  .setup-builder, .bait-catalog { overflow: visible; }
+  .setup-subsection-heading { grid-template-columns: 1fr; }
+  .progress-layout { height: auto; }
+  .my-catches-list { max-height: none; }
+  .my-catches-row { grid-template-columns: 1fr; }
+  .catch-row-stats, .catch-row-actions { grid-column: auto; }
+  .catch-row-actions { justify-content: start; }
+  .status-bar { position: sticky; bottom: 0; }
+}
+
+@media (max-width: 680px) {
+  .catch-dialog { width: calc(100vw - 10px); max-height: calc(100vh - 10px); }
+  .catch-dialog .catch-dialog-header { padding: 12px; }
+  .catch-dialog-layout { max-height: calc(100vh - 92px); }
+  .catch-form { padding: 12px !important; }
+  .catch-core-grid, .catch-advanced-grid { grid-template-columns: 1fr; }
+  .catch-wide-field, .catch-wide-field:last-child { grid-column: auto; }
+  .catch-history-summary { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .live-status { grid-template-columns: 1fr; }
+  .live-status-icon { display: none; }
+  .live-total-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .dashboard-card { padding: 11px; }
+  .dashboard-card-heading { display: grid; }
+  .session-kpi-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .session-kpi strong { font-size: 16px; }
+  .dashboard-recent-list, .dashboard-personal-progress { grid-template-columns: 1fr; }
+  .personal-highlight { grid-column: auto; }
+  .catch-timeline-bars { gap: 3px; height: 155px; overflow-x: auto; }
+  .catch-timeline-slot { min-width: 25px; }
+  .dashboard-location-row { grid-template-columns: 55px minmax(0, 1fr); }
+  .dashboard-location-art { width: 55px; }
+  .breakdown-columns { grid-template-columns: 1fr; }
+  .diagnostic-row { grid-template-columns: 1fr auto; }
+  .diagnostic-row time { grid-column: 1 / -1; }
+  .app-shell { border-width: 2px; box-shadow: inset 0 0 0 1px var(--edge-light); }
+  .app-header { padding: 7px 10px; }
+  .brand-subtitle { font-size: 15px; }
+  .brand-name { font-size: 18px; }
+  .tab-bar { padding-left: 5px; padding-right: 5px; grid-template-columns: repeat(7, minmax(128px, 1fr)); }
+  .tab { font-size: 12px; }
+  .app-main { padding: 6px; }
+  .filter-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .filter-panel { padding: 7px; }
+  .compendium-layout { gap: 6px; }
+  .fish-row { grid-template-columns: 52px minmax(0, 1fr) 82px 25px; }
+  .fish-row-water { display: none; }
+  .detail-hero { grid-template-columns: 1fr; }
+  .detail-sprite-wrap { min-height: 170px; }
+  .detail-summary { padding: 16px; }
+  .fact-grid, .detail-grid { grid-template-columns: 1fr; }
+  .variant-grid { grid-template-columns: repeat(2, 1fr); }
+  .compendium-catch-summary { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .progress-fields { grid-template-columns: 1fr; }
+  .locations-grid { grid-template-columns: 1fr; }
+  .setup-controls { grid-template-columns: 1fr; }
+  .setup-controls label:last-child { grid-column: auto; }
+  .setup-bait-choices { grid-template-columns: 1fr; }
+  .catalog-header { display: grid; }
+  .catalog-header .catalog-search-label { width: 100%; }
+  .catalog-header .mc-input { width: 100%; }
+  .setup-recommendation-grid { grid-template-columns: 1fr; }
+  .setup-page-nav { align-items: stretch; }
+  .setup-page-nav > span { width: 100%; }
+  .bait-row { grid-template-columns: 140px 1fr; }
+  .bait-row > :last-child { grid-column: 1 / -1; }
+  .progress-toolbar { grid-template-columns: 1fr; }
+  .my-catches-dashboard { padding: 11px; }
+  .my-catches-heading { display: grid; }
+  .catch-stat-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .catch-analytics-grid { grid-template-columns: 1fr; }
+  .catch-filter-bar { grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 7px; }
+  .catch-search-label { grid-column: 1 / -1; }
+  .my-catches-row { padding: 8px; }
+  .catch-checklist { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .catch-checklist label { min-height: 52px; }
+  .catch-row-stats { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .backup-actions { flex-wrap: wrap; }
+  .progress-side { grid-template-columns: 1fr; }
+  .source-summary { grid-template-columns: repeat(2, 1fr); }
+  .primary-completion-groups { grid-template-columns: 1fr; }
+  .status-bar #footer-location, .status-bar .status-spacer { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .live-progress i, .live-breakdown-track i { transition: none !important; }
+}

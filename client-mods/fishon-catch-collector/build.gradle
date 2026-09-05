@@ -1,0 +1,78 @@
+plugins {
+    id "net.fabricmc.fabric-loom-remap" version "${loom_version}"
+}
+
+version = project.mod_version
+group = project.maven_group
+
+base {
+    archivesName = project.archives_base_name
+}
+
+loom {
+    splitEnvironmentSourceSets()
+
+    mods {
+        "fishon-catch-collector" {
+            sourceSet sourceSets.main
+            sourceSet sourceSets.client
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+    mappings loom.officialMojangMappings()
+    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    modImplementation fabricApi.module("fabric-item-api-v1", project.fabric_api_version)
+    modImplementation fabricApi.module("fabric-lifecycle-events-v1", project.fabric_api_version)
+    modImplementation fabricApi.module("fabric-networking-api-v1", project.fabric_api_version)
+    modImplementation fabricApi.module("fabric-rendering-v1", project.fabric_api_version)
+
+    compileOnly "com.google.code.gson:gson:2.13.2"
+
+    testImplementation platform("org.junit:junit-bom:5.11.4")
+    testImplementation "org.junit.jupiter:junit-jupiter"
+    testImplementation "com.google.code.gson:gson:2.13.2"
+    testRuntimeOnly "org.junit.platform:junit-platform-launcher"
+}
+
+processResources {
+    inputs.property "version", project.version
+
+    filesMatching("fabric.mod.json") {
+        expand "version": project.version
+    }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.release = 21
+}
+
+tasks.withType(Test).configureEach {
+    useJUnitPlatform()
+}
+
+java {
+    withSourcesJar()
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
+tasks.named("jar") {
+    from(rootProject.file("LICENSE")) {
+        into "META-INF"
+        rename { "${it}_${project.archives_base_name}" }
+    }
+}
+
+tasks.named("sourcesJar") {
+    from(rootProject.file("LICENSE")) {
+        into "META-INF"
+        rename { "${it}_${project.archives_base_name}" }
+    }
+}

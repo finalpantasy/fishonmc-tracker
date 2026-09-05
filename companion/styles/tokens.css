@@ -1,0 +1,81 @@
+:root {
+  color-scheme: dark;
+  --world-image: url('../assets/locations/cinematic_cypresslake.png');
+  --ink-950: #061117;
+  --ink-900: #0a1a22;
+  --ink-850: #10252d;
+  --ink-800: #17313a;
+  --ink-700: #244650;
+  --stone-700: #35434a;
+  --stone-500: #6d7b7f;
+  --stone-300: #aebabe;
+  --paper: #f3f7f5;
+  --muted: #aabdc2;
+  --aqua: #40d5df;
+  --aqua-strong: #17b9c9;
+  --aqua-dark: #0b6976;
+  --green: #55d866;
+  --gold: #ffc34f;
+  --orange: #f08b35;
+  --red: #ef685b;
+  --purple: #c384ef;
+  --rare: #57a9ff;
+  --epic: #c57aff;
+  --legendary: #ffb13b;
+  --mythical: #ff5c65;
+  --special: #ef79df;
+  --panel: rgba(7, 22, 29, .89);
+  --panel-soft: rgba(14, 39, 48, .86);
+  --panel-opaque: #0c222b;
+  --edge-dark: #02090d;
+  --edge-mid: #355762;
+  --edge-light: #76929a;
+  --shadow: 0 12px 32px rgba(0, 0, 0, .5);
+  --pixel-font: "Minecraft Seven v2", "Minecraftia", Consolas, "Lucida Console", "Courier New", monospace;
+  --ui-font: Inter, "Segoe UI", Arial, sans-serif;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --focus: 0 0 0 2px var(--ink-950), 0 0 0 4px var(--aqua);
+}
+
+* { box-sizing: border-box; }
+
+html, body { width: 100%; min-height: 100%; }
+
+body {
+  margin: 0;
+  overflow: hidden;
+  background: var(--ink-950);
+  color: var(--paper);
+  font-family: var(--ui-font);
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+button, input, select, textarea { font: inherit; }
+button, select { cursor: pointer; }
+button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible, a:focus-visible { outline: none; box-shadow: var(--focus); }
+a { color: #6ee8f2; }
+a:hover { color: white; }
+img { max-width: 100%; }
+[hidden] { display: none !important; }
+
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .001ms !important; animation-duration: .001ms !important; }
+}

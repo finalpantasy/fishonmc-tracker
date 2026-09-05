@@ -1,0 +1,7 @@
+bridge/runtime/
+fishonmc-tracker.config.json
+*.log
+*backup*.json
+*export*.json
+client-mods/**/build/
+.gradle/

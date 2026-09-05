@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>FishOnMC Tracker</title>
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/fish/fish_bluegill.png">
+  <link rel="stylesheet" href="styles/tokens.css?v=20260829-2">
+  <link rel="stylesheet" href="styles/layout.css?v=20260830-4">
+  <link rel="stylesheet" href="styles/components.css?v=20260830-8">
+  <link rel="stylesheet" href="styles/responsive.css?v=20260830-4">
+  <script defer src="scripts/public-config.js?v=20260830-1"></script>
+  <script defer src="data/fish-data.js?v=20260830-2"></script>
+  <script defer src="scripts/fish-art.js?v=20260829-1"></script>
+  <script defer src="scripts/completion-model.js?v=20260830-1"></script>
+  <script defer src="scripts/model.js?v=20260829-2"></script>
+  <script defer src="scripts/catch-stats.js?v=20260829-2"></script>
+  <script defer src="scripts/progress-store.js?v=20260829-6"></script>
+  <script defer src="scripts/setup-optimizer.js?v=20260829-2"></script>
+  <script defer src="scripts/setups.js?v=20260830-6"></script>
+  <script defer src="scripts/catch-log.js?v=20260829-1"></script>
+  <script defer src="scripts/compendium.js?v=20260830-1"></script>
+  <script defer src="scripts/locations.js?v=20260829-2"></script>
+  <script defer src="scripts/progress-view.js?v=20260829-4"></script>
+  <script defer src="scripts/live-client.js?v=20260829-1"></script>
+  <script defer src="scripts/catch-importer.js?v=20260829-2"></script>
+  <script defer src="scripts/dashboard-model.js?v=20260830-1"></script>
+  <script defer src="scripts/dashboard.js?v=20260830-1"></script>
+  <script defer src="scripts/diagnostics.js?v=20260829-1"></script>
+  <script defer src="scripts/projects.js?v=20260830-1"></script>
+  <script defer src="scripts/app.js?v=20260830-8"></script>
+</head>
+<body>
+  <div class="world-backdrop" aria-hidden="true"></div>
+  <div class="world-shade" aria-hidden="true"></div>
+
+  <div class="app-shell">
+    <header class="app-header">
+      <button class="brand" type="button" data-go-tab="compendium" aria-label="Open Fish Compendium">
+        <span class="brand-icon" aria-hidden="true"><img src="assets/fish/fish_bluegill.png" alt=""></span>
+        <span class="brand-name">FishOnMC</span>
+        <span class="brand-subtitle">Tracker</span>
+      </button>
+      <div class="header-meta" aria-live="polite">
+        <span id="header-fish-count">Loading fish…</span>
+        <span class="meta-separator">◆</span>
+        <span id="save-state">Local save ready</span>
+      </div>
+    </header>
+
+    <nav class="tab-bar" role="tablist" aria-label="Tracker sections">
+      <button class="tab" id="tab-dashboard" role="tab" aria-selected="false" aria-controls="panel-dashboard" data-tab="dashboard"><span aria-hidden="true">⌂</span>Dashboard</button>
+      <button class="tab is-active" id="tab-compendium" role="tab" aria-selected="true" aria-controls="panel-compendium" data-tab="compendium"><span class="tab-fish" aria-hidden="true"><img src="assets/fish/fish_bluegill.png" alt=""></span>Fish Compendium</button>
+      <button class="tab" id="tab-locations" role="tab" aria-selected="false" aria-controls="panel-locations" data-tab="locations"><span aria-hidden="true">⌖</span>Locations</button>
+      <button class="tab" id="tab-setups" role="tab" aria-selected="false" aria-controls="panel-setups" data-tab="setups"><span aria-hidden="true">⚒</span>Baits &amp; Setups</button>
+      <button class="tab" id="tab-progress" role="tab" aria-selected="false" aria-controls="panel-progress" data-tab="progress"><span aria-hidden="true">✓</span>My Progress</button>
+      <button class="tab" id="tab-sources" role="tab" aria-selected="false" aria-controls="panel-sources" data-tab="sources"><span aria-hidden="true">§</span>Sources</button>
+    </nav>
+
+    <main class="app-main">
+      <section class="tab-panel" id="panel-dashboard" role="tabpanel" aria-labelledby="tab-dashboard" data-panel="dashboard" hidden>
+        <div class="dashboard-shell">
+          <div id="origin-migration-notice" class="origin-migration mc-panel" hidden></div>
+          <header id="live-status-banner" class="live-status mc-panel" data-status="connecting" aria-live="polite">
+            <span class="live-status-icon" aria-hidden="true"><img src="assets/fish/fish_bluegill.png" alt=""></span>
+            <div><span class="field-label">Live Tracker Bridge</span><h1 id="live-status-label">Connecting to local FishOnMC data…</h1><p id="live-freshness">The compendium and manual work even while offline.</p></div>
+            <button class="mc-button" id="dashboard-diagnostics-link" type="button">View diagnostics</button>
+          </header>
+
+          <div class="dashboard-grid">
+            <section class="mc-panel dashboard-card dashboard-session">
+              <div class="dashboard-card-heading"><div><h2>Personal catch cockpit</h2><p>Structured collector events when available, with exact PB log observations retained as fallback history.</p></div><span class="evidence-label">Observed catches</span></div>
+              <div id="dashboard-session-kpis" class="session-kpi-grid" aria-label="Current fishing log summary"></div>
+            </section>
+
+            <section class="mc-panel dashboard-card dashboard-timeline">
+              <div class="dashboard-card-heading"><div><h2>Catch timeline</h2><p>Observed catch rhythm across the available personal ledger.</p></div><span id="dashboard-session-window" class="dashboard-mini-value">—</span></div>
+              <div id="dashboard-catch-timeline" class="catch-timeline" aria-label="Observed catches over time"></div>
+            </section>
+            <section class="mc-panel dashboard-card dashboard-location-chart">
+              <div class="dashboard-card-heading"><div><h2>Location mix</h2><p>Where your observed catches landed.</p></div><span id="dashboard-location-count" class="dashboard-mini-value">—</span></div>
+              <div id="dashboard-location-mix" class="dashboard-location-mix"></div>
+            </section>
+
+            <section class="mc-panel dashboard-card dashboard-top-fish">
+              <h2>Hot species</h2>
+              <div id="dashboard-top-fish" class="dashboard-fish-leaders"></div>
+            </section>
+            <section class="mc-panel dashboard-card dashboard-recent">
+              <div class="dashboard-card-heading"><div><h2>Latest catches</h2><p>Newest exact measurements first.</p></div><button class="text-button" type="button" data-dashboard-tab="progress">Open My Catches</button></div>
+              <div id="dashboard-recent-catches" class="dashboard-recent-list"></div>
+            </section>
+            <section class="mc-panel dashboard-card dashboard-personal">
+              <div class="dashboard-card-heading"><div><h2>My collection</h2><p>Browser-saved checklist and catch log.</p></div><button class="text-button" type="button" data-dashboard-tab="progress">Full stats</button></div>
+              <div id="dashboard-personal-progress" class="dashboard-personal-progress"></div>
+            </section>
+
+            <section class="mc-panel dashboard-card dashboard-actions"><h2>Do this next</h2><div id="dashboard-next-actions" class="dashboard-list"></div></section>
+            <section class="mc-panel dashboard-card dashboard-quests"><h2>Active quests</h2><div id="dashboard-quests" class="dashboard-list"></div></section>
+            <section class="mc-panel dashboard-card dashboard-profile"><h2>Extras profile flags</h2><div id="dashboard-profile-flags" class="dashboard-facts"></div></section>
+
+            <section class="mc-panel dashboard-card dashboard-stats" id="dashboard-stats">
+              <div class="dashboard-card-heading"><div><h2>Lifetime Extras totals</h2><p>Aggregate counters persisted by FishOnMC Extras.</p></div><span class="evidence-label">Extras aggregate</span></div>
+              <div class="live-total-grid">
+                <div class="live-total"><span>Fish</span><strong id="dashboard-fish-total">—</strong></div>
+                <div class="live-total"><span>Pets</span><strong id="dashboard-pet-total">—</strong></div>
+                <div class="live-total"><span>Items</span><strong id="dashboard-item-total">—</strong></div>
+                <div class="live-total"><span>Quest pets</span><strong id="dashboard-quest-pet-total">—</strong></div>
+                <div class="live-total"><span>Quest items</span><strong id="dashboard-quest-item-total">—</strong></div>
+              </div>
+            </section>
+
+            <section class="mc-panel dashboard-card dashboard-breakdowns"><h2>Catch breakdowns</h2><div class="breakdown-columns"><div><h3>Rarity</h3><div id="dashboard-rarity-breakdown" class="live-breakdown"></div></div><div><h3>Variant</h3><div id="dashboard-variant-breakdown" class="live-breakdown"></div></div><div><h3>Size</h3><div id="dashboard-size-breakdown" class="live-breakdown"></div></div></div></section>
+            <section class="mc-panel dashboard-card dashboard-limits"><h2>Current automatic limits</h2><div id="dashboard-setup-unavailable" class="notice info">Current equipment is not persisted by Extras, so active-loadout compatibility cannot be calculated yet. Use the manual <button class="text-button" type="button" data-dashboard-tab="setups">Baits &amp; Setups</button> builder.</div><div id="dashboard-unavailable" class="dashboard-list"></div></section>
+          </div>
+        </div>
+      </section>
+
+
+      <section class="tab-panel is-active" id="panel-compendium" role="tabpanel" aria-labelledby="tab-compendium" data-panel="compendium">
+        <div class="filter-panel mc-panel">
+          <div class="search-group">
+            <label class="sr-only" for="fish-search">Search fish</label>
+            <span class="search-icon" aria-hidden="true">⌕</span>
+            <input class="mc-input search-input" id="fish-search" type="search" placeholder="Search fish, group, location, scientific name…" autocomplete="off">
+          </div>
+          <div class="filter-grid">
+            <label>Location<select class="mc-select" id="filter-location"><option value="">All locations</option></select></label>
+            <label>Water<select class="mc-select" id="filter-water"><option value="">All waters</option></select></label>
+            <label>Rarity<select class="mc-select" id="filter-rarity"><option value="">All rarities</option></select></label>
+            <label>Fish group<select class="mc-select" id="filter-group"><option value="">All groups</option></select></label>
+            <label>Climate<select class="mc-select" id="filter-climate"><option value="">All climates</option></select></label>
+            <label>Lifestyle<select class="mc-select" id="filter-lifestyle"><option value="">All lifestyles</option></select></label>
+            <label>Availability<select class="mc-select" id="filter-availability"><option value="">All entries</option><option value="current">Currently available</option><option value="event">Historical/event-only</option></select></label>
+            <label>Progress<select class="mc-select" id="filter-progress"><option value="">All progress</option><option value="caught">Normal caught</option><option value="missing">Normal missing</option><option value="any-missing">Any variant missing</option></select></label>
+          </div>
+          <button class="mc-button reset-button" id="reset-filters" type="button">↻ Reset filters</button>
+        </div>
+
+        <div class="compendium-layout">
+          <aside class="fish-browser mc-panel">
+            <div class="browser-toolbar">
+              <strong id="result-count">0 fish</strong>
+              <label class="inline-label">Sort
+                <select class="mc-select" id="sort-fish">
+                  <option value="name">Name A–Z</option>
+                  <option value="rarity-desc">Rarity high–low</option>
+                  <option value="unlock">Earliest unlock</option>
+                  <option value="weight-desc">Published max weight</option>
+                  <option value="completion">Completion</option>
+                </select>
+              </label>
+            </div>
+            <div id="fish-results" class="fish-results" role="listbox" aria-label="Fish results"></div>
+          </aside>
+          <article id="fish-detail" class="fish-detail mc-panel" aria-live="polite"></article>
+        </div>
+      </section>
+
+      <section class="tab-panel" id="panel-locations" role="tabpanel" aria-labelledby="tab-locations" data-panel="locations" hidden>
+        <div class="section-heading mc-panel">
+          <div><h1>Fishing Locations</h1><p>Every current destination, its unlock, climate, pet, fish roster, and your completion.</p></div>
+          <span id="locations-summary" class="large-count">16</span>
+        </div>
+        <div id="locations-grid" class="locations-grid"></div>
+      </section>
+
+      <section class="tab-panel" id="panel-setups" role="tabpanel" aria-labelledby="tab-setups" data-panel="setups" hidden>
+        <div class="setup-page">
+          <section class="setup-goal-finder mc-panel" id="setup-goal-finder" aria-labelledby="setup-goal-title">
+            <header><span class="field-label">Quick answer</span><h1 id="setup-goal-title">What bait or lure should I use?</h1><p>Choose your target and goal. The strongest supported published match appears immediately.</p></header>
+            <nav class="setup-page-nav" aria-label="Baits and setups page sections">
+              <span>Also on this page</span>
+              <button class="text-button" type="button" data-setup-jump="full-gear-setup">Full gear setup ↓</button>
+              <button class="text-button" type="button" data-setup-jump="bait-catalog">Browse all baits &amp; lures ↓</button>
+            </nav>
+            <div class="setup-controls">
+              <label>Location<select class="mc-select" id="setup-location"></select></label>
+              <label>Fish<select class="mc-select" id="setup-fish"></select></label>
+              <label>Goal<select class="mc-select" id="setup-goal"><option value="normal">Normal rarity cleanup</option><option value="gigantic">Gigantic / record</option><option value="albino">Albino</option><option value="melanistic">Melanistic</option><option value="trophy">Trophy</option><option value="money">Money / throughput</option></select></label>
+            </div>
+            <div id="setup-bait-answer" class="setup-bait-answer" aria-live="polite"></div>
+          </section>
+          <div class="setup-detail-layout">
+            <section class="setup-builder mc-panel" id="full-gear-setup">
+              <header><span class="field-label">Complete loadout</span><h1>Full gear setup</h1><p>Every recommendation explains whether it is sourced or derived.</p></header>
+              <div id="setup-output" class="setup-output"></div>
+            </section>
+            <section class="bait-catalog mc-panel" id="bait-catalog">
+              <div class="catalog-header"><div><span class="field-label">Reference library</span><h1>Bait &amp; Lure Catalog</h1><p>Search the complete official-effect list without burying the setup above it.</p></div><label class="catalog-search-label"><span class="sr-only">Search bait or effect</span><input class="mc-input" id="bait-search" type="search" placeholder="Search bait, fish group, rarity, or effect…"></label></div>
+              <div class="catalog-status"><strong id="bait-result-count">Showing 0</strong><button class="mc-button compact-button" id="bait-show-all" type="button">Show all</button></div>
+              <div id="bait-results" class="bait-results"></div>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <section class="tab-panel" id="panel-progress" role="tabpanel" aria-labelledby="tab-progress" data-panel="progress" hidden>
+        <div class="progress-toolbar mc-panel">
+          <div class="overall-progress"><span class="progress-fish" aria-hidden="true"><img src="assets/fish/fish_bluegill.png" alt=""></span><div><span class="field-label">Current permanent content</span><strong id="overall-percent">0%</strong><div class="progress-track"><span id="overall-progress-bar"></span></div><small id="overall-count">0 / 0 fish-location entries</small></div></div>
+          <label class="toggle-line"><input id="include-events" type="checkbox"> Include historical event entries</label>
+          <div class="backup-actions"><button class="mc-button" id="export-progress" type="button">⇩ Export backup</button><label class="mc-button file-button">⇧ Import backup<input id="import-progress" type="file" accept="application/json,.json"></label><button class="mc-button danger-button" id="request-reset" type="button">↻ Reset progress</button></div>
+        </div>
+        <section class="my-catches-dashboard mc-panel" aria-labelledby="my-catches-title">
+          <div class="my-catches-heading"><div><span class="field-label">Personal collection analytics</span><h1 id="my-catches-title">My Catches</h1><p>One checklist row per fish and location, backed by optional individual catch records. Blank measurements stay unknown rather than counting as zero.</p></div><strong id="my-catches-count">0 entries</strong></div>
+          <div class="catch-stat-strip" aria-label="Catch log summary">
+            <div><span>Logged catches</span><strong id="catch-stat-total">0</strong></div>
+            <div><span>Checklist coverage</span><strong id="catch-stat-completion">0%</strong></div>
+            <div><span>Mean weight</span><strong id="catch-stat-mean">—</strong></div>
+            <div><span>Median weight</span><strong id="catch-stat-median">—</strong></div>
+            <div><span>Heaviest</span><strong id="catch-stat-heaviest">—</strong></div>
+            <div><span>Closest to published max</span><strong id="catch-stat-closest">—</strong></div>
+            <div><span>Data completeness</span><strong id="catch-stat-completeness">—</strong></div>
+          </div>
+          <div id="catch-highlights" class="catch-highlights" aria-live="polite"></div>
+          <details id="catch-analytics" class="catch-analytics">
+            <summary>Open full catch analytics <span>sizes, rewards, fights, variants, gear, conditions, sessions &amp; data coverage</span></summary>
+            <div id="catch-analytics-grid" class="catch-analytics-grid"></div>
+            <p class="catch-analytics-note">These are summaries of your logged catches, not official catch chances. Gear, bait, pet, weather, and time comparisons always show their sample size; they do not prove causation or include failed casts.</p>
+          </details>
+          <div class="catch-filter-bar">
+            <label class="catch-search-label">Search<input class="mc-input" id="catch-search" type="search" placeholder="Fish or location…" autocomplete="off"></label>
+            <label>Location<select class="mc-select" id="catch-filter-location"><option value="">All locations</option></select></label>
+            <label>Water<select class="mc-select" id="catch-filter-water"><option value="">All waters</option></select></label>
+            <label>Rarity<select class="mc-select" id="catch-filter-rarity"><option value="">All rarities</option></select></label>
+            <label>Status<select class="mc-select" id="catch-filter-status"><option value="">All entries</option><option value="caught">Caught/checklisted</option><option value="missing">Completely missing</option></select></label>
+            <label>Variant<select class="mc-select" id="catch-filter-variant"><option value="">Any variant</option><option value="normal">Normal</option><option value="gigantic">Gigantic</option><option value="albino">Albino</option><option value="melanistic">Melanistic</option><option value="trophy">Trophy</option><option value="fabled">Fabled</option></select></label>
+            <label>Weight data<select class="mc-select" id="catch-filter-weight"><option value="">Any coverage</option><option value="complete">Complete</option><option value="partial">Partial</option><option value="missing">No weights</option></select></label>
+            <label>Sort<select class="mc-select" id="catch-sort"><option value="name">Fish name</option><option value="incomplete-first">Incomplete first</option><option value="recent">Most recent</option><option value="count-desc">Most catches</option><option value="max-desc">Heaviest PB</option><option value="published-desc">Closest to published max</option></select></label>
+          </div>
+          <div id="my-catches-list" class="my-catches-list"></div>
+        </section>
+        <div class="progress-layout">
+          <section class="location-progress mc-panel"><h2>Location completion</h2><div class="table-scroll"><table><thead><tr><th>Location</th><th>Normal</th><th>Gigantic</th><th>Albino</th><th>Melanistic</th><th>Trophy</th><th>Fabled</th></tr></thead><tbody id="location-progress-body"></tbody></table></div></section>
+          <aside class="progress-side">
+            <section class="mc-panel"><h2>Variant breakdown</h2><div id="variant-breakdown" class="breakdown-list"></div></section>
+            <section class="mc-panel"><h2>Incomplete Legendary / Mythical</h2><div id="rare-missing" class="mini-list"></div></section>
+            <section class="mc-panel"><h2>Recently updated</h2><div id="recent-progress" class="mini-list"></div></section>
+          </aside>
+        </div>
+      </section>
+
+      <section class="tab-panel" id="panel-sources" role="tabpanel" aria-labelledby="tab-sources" data-panel="sources" hidden>
+        <article class="sources-page mc-panel prose">
+          <h1>Sources, limits, and refresh status</h1>
+          <div id="source-summary" class="source-summary"></div>
+          <h2>Authority order</h2>
+          <ol><li>Current in-game tooltip/menu and current owner/staff change log.</li><li>Current official FishOnMC wiki page.</li><li>Official website and rules.</li><li>Repeated current community testing and visual routes.</li></ol>
+          <h2>What this compendium can prove</h2>
+          <p>Location-table fields, official sprites, global rarity odds, variant bases, historical event odds, and published bait/lure effect text are source-backed. Ordinary location-pool per-fish odds are not published and are never manufactured here; conditional odds from specific historical events are labelled separately.</p>
+          <h2>Automatic tracking</h2>
+          <p id="log-import-status">The local bridge prefers exact structured personal catches from the approval-gated collector and retains normalized PB notifications from latest.log as a safe fallback. Unknown fields remain unknown rather than guessed.</p>
+          <section class="project-showcase" aria-labelledby="project-showcase-title">
+            <div class="project-showcase-heading">
+              <span class="field-label">Unofficial community suite</span>
+              <h2 id="project-showcase-title">Our FishOnMC mods &amp; visual packs</h2>
+              <p>Every current user-facing project we built is listed here. Downloads are the exact bundled versions; public repositories are linked where they already exist.</p>
+            </div>
+            <div id="project-links" class="project-grid"></div>
+            <p class="project-disclaimer">These projects are unofficial and are not affiliated with or endorsed by FishOnMC, Mojang, or Microsoft. Check the current FishOnMC rules before using client mods. Alpha and beta labels are intentional.</p>
+          </section>
+          <h2>Primary links</h2>
+          <ul id="source-links"></ul>
+          <h2>Data-quality notices</h2>
+          <div id="quality-notices" class="quality-notices"></div>
+          <section id="live-diagnostics" class="live-diagnostics" tabindex="-1">
+            <h2>Live bridge diagnostics</h2>
+            <p id="diagnostics-updated-at">Open the Tracker through the launcher to see live source status.</p>
+            <div id="diagnostics-sources" class="diagnostics-list"></div>
+            <div id="diagnostics-warnings" class="quality-notices"></div>
+          </section>
+        </article>
+      </section>
+    </main>
+
+    <footer class="status-bar">
+      <span>Snapshot: <strong id="snapshot-date">—</strong></span>
+      <span>•</span>
+      <span>Ordinary per-fish odds not published</span>
+      <span class="status-spacer"></span>
+      <span id="footer-location">Cypress Lake backdrop</span>
+      <span>•</span>
+      <span>Local data</span>
+    </footer>
+  </div>
+
+  <dialog id="catch-dialog" class="mc-dialog catch-dialog" aria-labelledby="catch-dialog-title">
+    <div class="catch-dialog-header">
+      <div>
+        <span class="field-label">Personal catch log</span>
+        <h2 id="catch-dialog-title">Log a catch</h2>
+        <p id="catch-dialog-context">Choose a fish-location entry from My Progress.</p>
+      </div>
+      <button class="mc-button catch-dialog-close" id="close-catch-dialog" type="button" aria-label="Close catch log">×</button>
+    </div>
+    <div class="catch-dialog-layout">
+      <form id="catch-form" class="catch-form" novalidate>
+        <input id="catch-id" type="hidden">
+        <div class="catch-core-grid">
+          <label>Caught at<input class="mc-input" id="catch-caught-at" type="datetime-local"></label>
+          <label>Variant<select class="mc-select" id="catch-variant" required><option value="normal">Normal</option><option value="gigantic">Gigantic</option><option value="albino">Albino</option><option value="melanistic">Melanistic</option><option value="trophy">Trophy</option><option value="fabled">Fabled</option></select></label>
+          <label>Size tier<select class="mc-select" id="catch-size-tier"><option value="">Not recorded</option><option value="baby">Baby</option><option value="juvenile">Juvenile</option><option value="adult">Adult</option><option value="large">Large</option><option value="gigantic">Gigantic</option></select></label>
+          <label>Weight (lb)<input class="mc-input" id="catch-weight" type="number" min="0" step="any" inputmode="decimal" placeholder="Optional"></label>
+          <label>Length (in)<input class="mc-input" id="catch-length" type="number" min="0" step="any" inputmode="decimal" placeholder="Optional"></label>
+          <label>Coin value<input class="mc-input" id="catch-value" type="number" min="0" step="any" inputmode="decimal" placeholder="Optional"></label>
+          <label>XP<input class="mc-input" id="catch-xp" type="number" min="0" step="any" inputmode="decimal" placeholder="Optional"></label>
+          <label>Session tag<input class="mc-input" id="catch-session" maxlength="120" placeholder="e.g. Saturday records"></label>
+          <label class="catch-wide-field">Bait or lure<select class="mc-select" id="catch-bait"><option value="">Not recorded</option></select></label>
+          <label class="catch-wide-field">Notes<textarea class="mc-input" id="catch-notes" maxlength="500" rows="3" placeholder="Anything worth remembering about this catch"></textarea></label>
+        </div>
+
+        <details id="catch-advanced" class="catch-advanced">
+          <summary>Advanced setup &amp; conditions <span>optional</span></summary>
+          <div class="catch-advanced-grid">
+            <label>Rod<input class="mc-input" id="catch-rod" maxlength="120"></label>
+            <label>Reel<input class="mc-input" id="catch-reel" maxlength="120"></label>
+            <label>Line<input class="mc-input" id="catch-line" maxlength="120"></label>
+            <label>Armor<input class="mc-input" id="catch-armor" maxlength="120"></label>
+            <label>Pet<input class="mc-input" id="catch-pet" maxlength="120"></label>
+            <label>Power<input class="mc-input" id="catch-power" type="number" min="0" step="any"></label>
+            <label>Luck bonus<input class="mc-input" id="catch-luck" type="number" min="0" step="any"></label>
+            <label>Variant bonus<input class="mc-input" id="catch-variant-bonus" type="number" min="0" step="any"></label>
+            <label>Scale bonus<input class="mc-input" id="catch-scale" type="number" min="0" step="any"></label>
+            <label>Bite-speed bonus<input class="mc-input" id="catch-bite-speed" type="number" min="0" step="any"></label>
+            <label>Money bonus<input class="mc-input" id="catch-money" type="number" min="0" step="any"></label>
+            <label>Fight time (seconds)<input class="mc-input" id="catch-fight-seconds" type="number" min="0" step="any"></label>
+            <label>Day phase<select class="mc-select" id="catch-day-phase"><option value="">Not recorded</option><option value="dawn">Dawn</option><option value="day">Day</option><option value="dusk">Dusk</option><option value="night">Night</option></select></label>
+            <label>Weather<select class="mc-select" id="catch-weather"><option value="">Not recorded</option><option value="clear">Clear</option><option value="rain">Rain</option><option value="thunder">Thunder</option></select></label>
+          </div>
+          <fieldset class="catch-context-flags"><legend>Catch context</legend><label><input id="catch-event" type="checkbox"> Event catch</label><label><input id="catch-tournament" type="checkbox"> Tournament</label><label><input id="catch-quest" type="checkbox"> Quest</label></fieldset>
+        </details>
+
+        <p id="catch-form-error" class="catch-form-error" role="alert" hidden></p>
+        <div class="dialog-actions"><button class="mc-button" id="cancel-catch" type="button">Cancel</button><button class="mc-button primary-button" id="save-catch" type="submit">Save catch</button></div>
+      </form>
+      <aside class="catch-history-panel" aria-labelledby="catch-history-title">
+        <div class="catch-history-heading"><div><span class="field-label">This fish at this location</span><h3 id="catch-history-title">Catch history</h3></div><strong id="catch-history-count">0</strong></div>
+        <div id="catch-history-summary" class="catch-history-summary"></div>
+        <div id="catch-history" class="catch-history"></div>
+      </aside>
+    </div>
+  </dialog>
+
+  <dialog id="reset-dialog" class="mc-dialog">
+    <form method="dialog">
+      <h2>Reset all progress?</h2>
+      <p>This clears catches, sizes, variants, combinations, personal bests, and notes from this browser. Export a backup first if you may want them later.</p>
+      <div class="dialog-actions"><button class="mc-button" value="cancel">Cancel</button><button class="mc-button danger-button" id="confirm-reset" value="confirm">Reset everything</button></div>
+    </form>
+  </dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

@@ -1,0 +1,1811 @@
+{
+  "schemaVersion": 1,
+  "snapshot": "2026-09-05",
+  "fish": [
+    {
+      "normalizedId": "aba",
+      "displayName": "Aba",
+      "maximumWeightLb": null
+    },
+    {
+      "normalizedId": "adriatic-sturgeon",
+      "displayName": "Adriatic Sturgeon",
+      "maximumWeightLb": 55
+    },
+    {
+      "normalizedId": "african-arowana",
+      "displayName": "African Arowana",
+      "maximumWeightLb": null
+    },
+    {
+      "normalizedId": "african-butter-catfish",
+      "displayName": "African Butter Catfish",
+      "maximumWeightLb": null
+    },
+    {
+      "normalizedId": "african-carp",
+      "displayName": "African Carp",
+      "maximumWeightLb": null
+    },
+    {
+      "normalizedId": "african-sharptooth-catfish",
+      "displayName": "African Sharptooth Catfish",
+      "maximumWeightLb": null
+    },
+    {
+      "normalizedId": "alligator-gar",
+      "displayName": "Alligator Gar",
+      "maximumWeightLb": 302
+    },
+    {
+      "normalizedId": "almaco-jack",
+      "displayName": "Almaco Jack",
+      "maximumWeightLb": 132
+    },
+    {
+      "normalizedId": "american-alligator",
+      "displayName": "American Alligator",
+      "maximumWeightLb": 2200
+    },
+    {
+      "normalizedId": "american-paddlefish",
+      "displayName": "American Paddlefish",
+      "maximumWeightLb": 200
+    },
+    {
+      "normalizedId": "american-shad",
+      "displayName": "American Shad",
+      "maximumWeightLb": 12
+    },
+    {
+      "normalizedId": "angelshark",
+      "displayName": "Angelshark",
+      "maximumWeightLb": 176.5
+    },
+    {
+      "normalizedId": "apapa",
+      "displayName": "Apapa",
+      "maximumWeightLb": 15.5
+    },
+    {
+      "normalizedId": "arapaima",
+      "displayName": "Arapaima",
+      "maximumWeightLb": 441
+    },
+    {
+      "normalizedId": "arctic-char",
+      "displayName": "Arctic Char",
+      "maximumWeightLb": 33
+    },
+    {
+      "normalizedId": "arctic-grayling",
+      "displayName": "Arctic Grayling",
+      "maximumWeightLb": 8.5
+    },
+    {
+      "normalizedId": "asp",
+      "displayName": "Asp",
+      "maximumWeightLb": 20
+    },
+    {
+      "normalizedId": "assuan-labeo",
+      "displayName": "Assuan Labeo",
+      "maximumWeightLb": null
+    },
+    {
+      "normalizedId": "atlantic-bluefin-tuna",
+      "displayName": "Atlantic Bluefin Tuna",
+      "maximumWeightLb": 1508
+    },
+    {
+      "normalizedId": "atlantic-bonito",
+      "displayName": "Atlantic Bonito",
+      "maximumWeightLb": 24.5
+    },
+    {
+      "normalizedId": "atlantic-chub-mackerel",
+      "displayName": "Atlantic Chub Mackerel",
+      "maximumWeightLb": 3
+    },
+    {
+      "normalizedId": "atlantic-cod",
+      "displayName": "Atlantic Cod",
+      "maximumWeightLb": 211.5
+    },
+    {
+      "normalizedId": "atlantic-croaker",
+      "displayName": "Atlantic Croaker",
+      "maximumWeightLb": 5.5
+    },
+    {
+      "normalizedId": "atlantic-halibut",
+      "displayName": "Atlantic Halibut",
+      "maximumWeightLb": 705.5
+    },
+    {
+      "normalizedId": "atlantic-herring",
+      "displayName": "Atlantic Herring",
+      "maximumWeightLb": null
+    },
+    {
+      "normalizedId": "atlantic-mackerel",
+      "displayName": "Atlantic Mackerel",
+      "maximumWeightLb": 7.5
+    },
+    {
+      "normalizedId": "atlantic-salmon",
+      "displayName": "Atlantic Salmon",
+      "maximumWeightLb": 103
+    },
+    {
+      "normalizedId": "atlantic-spotted-flounder",
+      "displayName": "Atlantic Spotted Flounder",
+      "maximumWeightLb": 1
+    },
+    {
+      "normalizedId": "australasian-snapper",
+      "displayName": "Australasian Snapper",
+      "maximumWeightLb": 44
+    },
+    {
+      "normalizedId": "australian-bass",
+      "displayName": "Australian Bass",
+      "maximumWeightLb": 6.5
+    },
+    {
+      "normalizedId": "australian-bonito",
+      "displayName": "Australian Bonito",
+      "maximumWeightLb": 20.5
+    },
+    {
+      "normalizedId": "australian-spotted-mackerel",
+      "displayName": "Australian Spotted Mackerel",
+      "maximumWeightLb": 22.5
+    },
+    {
+      "normalizedId": "ayu",
+      "displayName": "Ayu",
+      "maximumWeightLb": 4
+    },
+    {
+      "normalizedId": "barbel",
+      "displayName": "Barbel",
+      "maximumWeightLb": 26.5
+    },
+    {
+      "normalizedId": "bebe-mormyrid",
+      "displayName": "Bebe Mormyrid",
+      "maximumWeightLb": null
+    },
+    {
+      "normalizedId": "beluga-sturgeon",
+      "displayName": "Beluga Sturgeon",
+      "maximumWeightLb": 7055
+    },
+    {
+      "normalizedId": "biara",
+      "displayName": "Biara",
+      "maximumWeightLb": 4.5
+    },
+    {
+      "normalizedId": "bicuda",
+      "displayName": "Bicuda",
+      "maximumWeightLb": 13
+    },
+    {
+      "normalizedId": "big-eye-tuna",
+      "displayName": "Big Eye Tuna",
+      "maximumWeightLb": 463
+    },
+    {
+      "normalizedId": "bigeye-trevally",
+      "displayName": "Bigeye Trevally",
+      "maximumWeightLb": 39.5
+    },
+    {
+      "normalizedId": "bigfin-reef-squid",
+      "displayName": "Bigfin Reef Squid",
+      "maximumWeightLb": 4
+    },
+    {
+      "normalizedId": "bigmouth-buffalo",
+      "displayName": "Bigmouth Buffalo",
+      "maximumWeightLb": 70.5
+    },
+    {
+      "normalizedId": "biwa-gudgeon",
+      "displayName": "Biwa Gudgeon",
+      "maximumWeightLb": 0.5
+    },
+    {
+      "normalizedId": "biwa-salmon",
+      "displayName": "Biwa Salmon",
+      "maximumWeightLb": 3
+    },
+    {
+      "normalizedId": "black-banded-aracu",
+      "displayName": "Black Banded Aracu",
+      "maximumWeightLb": 1.5
+    },
+    {
+      "normalizedId": "black-bullhead-catfish",
+      "displayName": "Black Bullhead Catfish",
+      "maximumWeightLb": 8
+    },
+    {
+      "normalizedId": "black-crappie",
+      "displayName": "Black Crappie",
+      "maximumWeightLb": 60.5
+    },
+    {
+      "normalizedId": "black-drum",
+      "displayName": "Black Drum",
+      "maximumWeightLb": 113
+    },
+    {
+      "normalizedId": "black-grouper",
+      "displayName": "Black Grouper",
+      "maximumWeightLb": 220.5
+    },
+    {
+      "normalizedId": "black-marlin",
+      "displayName": "Black Marlin",
+      "maximumWeightLb": 1653.5
+    },
+    {
+      "normalizedId": "black-sea-bass",
+      "displayName": "Black Sea Bass",
+      "maximumWeightLb": 9.5
+    },
+    {
+      "normalizedId": "black-triggerfish",
+      "displayName": "Black Triggerfish",
+      "maximumWeightLb": 5.5
+    },
+    {
+      "normalizedId": "blonde-skate",
+      "displayName": "Blonde Skate",
+      "maximumWeightLb": 31.5
+    },
+    {
+      "normalizedId": "blue-catfish",
+      "displayName": "Blue Catfish",
+      "maximumWeightLb": 150
+    },
+    {
+      "normalizedId": "blue-ling",
+      "displayName": "Blue Ling",
+      "maximumWeightLb": null
+    },
+    {
+      "normalizedId": "blue-marlin",
+      "displayName": "Blue Marlin",
+      "maximumWeightLb": 1808
+    },
+    {
+      "normalizedId": "blue-runner",
+      "displayName": "Blue Runner",
+      "maximumWeightLb": 11
+    },
+    {
+      "normalizedId": "blue-shark",
+      "displayName": "Blue Shark",
+      "maximumWeightLb": 454
+    },
+    {
+      "normalizedId": "blue-tilapia",
+      "displayName": "Blue Tilapia",
+      "maximumWeightLb": null
+    },
+    {
+      "normalizedId": "blue-whiting",
+      "displayName": "Blue Whiting",
+      "maximumWeightLb": null
+    },
+    {
+      "normalizedId": "bluefin-trevally",
+      "displayName": "Bluefin Trevally",
+      "maximumWeightLb": 96
+    },
+    {
+      "normalizedId": "bluefish",
+      "displayName": "Bluefish",
+      "maximumWeightLb": 32
+    },
+    {
+      "normalizedId": "bluegill",
+      "displayName": "Bluegill",
+      "maximumWeightLb": 5
+    },
+    {
+      "normalizedId": "bluespotted-seabream",
+      "displayName": "Bluespotted Seabream",
+      "maximumWeightLb": 25.5
+    },
+    {
+      "normalizedId": "bluestriped-snapper",
+      "displayName": "Bluestriped Snapper",
+      "maximumWeightLb": 2
+    },
+    {
+      "normalizedId": "bonefish",
+      "displayName": "Bonefish",
+      "maximumWeightLb": 22
+    },
+    {
+      "normalizedId": "bonnethead-shark",
+      "displayName": "Bonnethead Shark",
+      "maximumWeightLb": 24
+    },
+    {
+      "normalizedId": "bony-bream",
+      "displayName": "Bony Bream",
+      "maximumWeightLb": 1.5
+    },
+    {
+      "normalizedId": "broad-barred-king-mackerel",
+      "displayName": "Broad-barred King Mackerel",
+      "maximumWeightLb": 22
+    },
+    {
+      "normalizedId": "brook-trout",
+      "displayName": "Brook Trout",
+      "maximumWeightLb": 17.5
+    },
+    {
+      "normalizedId": "brown-bullhead-catfish",
+      "displayName": "Brown Bullhead Catfish",
+      "maximumWeightLb": 6
+    },
+    {
+      "normalizedId": "brown-marbled-grouper",
+      "displayName": "Brown-marbled Grouper",
+      "maximumWeightLb": 24.5
+    },
+    {
+      "normalizedId": "brown-meagre",
+      "displayName": "Brown Meagre",
+      "maximumWeightLb": 9
+    },
+    {
+      "normalizedId": "brown-trout",
+      "displayName": "Brown Trout",
+      "maximumWeightLb": 110
+    },
+    {
+      "normalizedId": "bull-shark",
+      "displayName": "Bull Shark",
+      "maximumWeightLb": 698
+    },
+    {
+      "normalizedId": "burbot",
+      "displayName": "Burbot",
+      "maximumWeightLb": 75
+    },
+    {
+      "normalizedId": "butterfly-peacock-bass",
+      "displayName": "Butterfly Peacock Bass",
+      "maximumWeightLb": 15
+    },
+    {
+      "normalizedId": "camouflage-grouper",
+      "displayName": "Camouflage Grouper",
+      "maximumWeightLb": 23
+    },
+    {
+      "normalizedId": "chachorro",
+      "displayName": "Chachorro",
+      "maximumWeightLb": 2
+    },
+    {
+      "normalizedId": "chain-pickerel",
+      "displayName": "Chain Pickerel",
+      "maximumWeightLb": 9.5
+    },
+    {
+      "normalizedId": "channel-catfish",
+      "displayName": "Channel Catfish",
+      "maximumWeightLb": 58
+    },
+    {
+      "normalizedId": "chinese-trumpet-fish",
+      "displayName": "Chinese Trumpet Fish",
+      "maximumWeightLb": 2
+    },
+    {
+      "normalizedId": "chum-salmon",
+      "displayName": "Chum Salmon",
+      "maximumWeightLb": 35
+    },
+    {
+      "normalizedId": "cisco",
+      "displayName": "Cisco",
+      "maximumWeightLb": 7.5
+    },
+    {
+      "normalizedId": "cobia",
+      "displayName": "Cobia",
+      "maximumWeightLb": 150
+    },
+    {
+      "normalizedId": "coho-salmon",
+      "displayName": "Coho Salmon",
+      "maximumWeightLb": 33.5
+    },
+    {
+      "normalizedId": "common-carp",
+      "displayName": "Common Carp",
+      "maximumWeightLb": 88.5
+    },
+    {
+      "normalizedId": "common-dab",
+      "displayName": "Common Dab",
+      "maximumWeightLb": null
+    },
+    {
+      "normalizedId": "common-dentex",
+      "displayName": "Common Dentex",
+      "maximumWeightLb": 31.5
+    },
+    {
+      "normalizedId": "common-guitarfish",
+      "displayName": "Common Guitarfish",
+      "maximumWeightLb": 58.5
+    },
+    {
+      "normalizedId": "common-ling",
+      "displayName": "Common Ling",
+      "maximumWeightLb": null
+    },
+    {
+      "normalizedId": "common-pandora",
+      "displayName": "Common Pandora",
+      "maximumWeightLb": 7
+    },
+    {
+      "normalizedId": "common-remora",
+      "displayName": "Common Remora",
+      "maximumWeightLb": 2.5
+    },
+    {
+      "normalizedId": "common-snook",
+      "displayName": "Common Snook",
+      "maximumWeightLb": 53.5
+    },
+    {
+      "normalizedId": "common-stingray",
+      "displayName": "Common Stingray",
+      "maximumWeightLb": 32
+    },
+    {
+      "normalizedId": "common-sturgeon",
+      "displayName": "Common Sturgeon",
+      "maximumWeightLb": 882
+    },
+    {
+      "normalizedId": "common-thresher",
+      "displayName": "Common Thresher",
+      "maximumWeightLb": 767
+    },
+    {
+      "normalizedId": "coral-trout",
+      "displayName": "Coral Trout",
+      "maximumWeightLb": 52
+    },
+    {
+      "normalizedId": "crevalle-jack",
+      "displayName": "Crevalle Jack",
+      "maximumWeightLb": 70.5
+    },
+    {
+      "normalizedId": "crimson-snapper",
+      "displayName": "Crimson Snapper",
+      "maximumWeightLb": 15
+    },
+    {
+      "normalizedId": "crucian-carp",
+      "displayName": "Crucian Carp",
+      "maximumWeightLb": 6.5
+    },
+    {
+      "normalizedId": "cubera-snapper",
+      "displayName": "Cubera Snapper",
+      "maximumWeightLb": 198.5
+    },
+    {
+      "normalizedId": "cusk",
+      "displayName": "Cusk",
+      "maximumWeightLb": 66
+    },
+    {
+      "normalizedId": "cutthroat-trout",
+      "displayName": "Cutthroat Trout",
+      "maximumWeightLb": 41
+    },
+    {
+      "normalizedId": "dogtooth-tuna",
+      "displayName": "Dogtooth Tuna",
+      "maximumWeightLb": 289
+    },
+    {
+      "normalizedId": "dolly-varden",
+      "displayName": "Dolly Varden",
+      "maximumWeightLb": 40.5
+    },
+    {
+      "normalizedId": "doublespotted-queenfish",
+      "displayName": "Doublespotted Queenfish",
+      "maximumWeightLb": 24.5
+    },
+    {
+      "normalizedId": "dourada-catfish",
+      "displayName": "Dourada Catfish",
+      "maximumWeightLb": 205
+    },
+    {
+      "normalizedId": "dusky-flathead",
+      "displayName": "Dusky Flathead",
+      "maximumWeightLb": 33
+    },
+    {
+      "normalizedId": "dusky-grouper",
+      "displayName": "Dusky Grouper",
+      "maximumWeightLb": 132.5
+    },
+    {
+      "normalizedId": "eel-tailed-catfish",
+      "displayName": "Eel Tailed Catfish",
+      "maximumWeightLb": 15
+    },
+    {
+      "normalizedId": "electric-catfish",
+      "displayName": "Electric Catfish",
+      "maximumWeightLb": null
+    },
+    {
+      "normalizedId": "electric-eel",
+      "displayName": "Electric Eel",
+      "maximumWeightLb": 44
+    },
+    {
+      "normalizedId": "elephant-snout",
+      "displayName": "Elephant Snout",
+      "maximumWeightLb": null
+    },
+    {
+      "normalizedId": "elongate-tigerfish",
+      "displayName": "Elongate Tigerfish",
+      "maximumWeightLb": null
+    },
+    {
+      "normalizedId": "estuary-perch",
+      "displayName": "Estuary Perch",
+      "maximumWeightLb": 22
+    },
+    {
+      "normalizedId": "european-conger",
+      "displayName": "European Conger",
+      "maximumWeightLb": 242.5
+    },
+    {
+      "normalizedId": "european-eel",
+      "displayName": "European Eel",
+      "maximumWeightLb": 14.5
+    },
+    {
+      "normalizedId": "european-flounder",
+      "displayName": "European Flounder",
+      "maximumWeightLb": null
+    },
+    {
+      "normalizedId": "european-hake",
+      "displayName": "European Hake",
+      "maximumWeightLb": 33
+    },
+    {
+      "normalizedId": "european-monkfish",
+      "displayName": "European Monkfish",
+      "maximumWeightLb": 127
+    },
+    {
+      "normalizedId": "european-perch",
+      "displayName": "European Perch",
+      "maximumWeightLb": 10.5
+    },
+    {
+      "normalizedId": "european-plaice",
+      "displayName": "European Plaice",
+      "maximumWeightLb": null
+    },
+    {
+      "normalizedId": "european-pollack",
+      "displayName": "European Pollack",
+      "maximumWeightLb": null
+    },
+    {
+      "normalizedId": "european-seabass",
+      "displayName": "European Seabass",
+      "maximumWeightLb": 26.5
+    },
+    {
+      "normalizedId": "eyespot-bowfin",
+      "displayName": "Eyespot Bowfin",
+      "maximumWeightLb": 21.5
+    },
+    {
+      "normalizedId": "flat-whiskered-catfish",
+      "displayName": "Flat Whiskered Catfish",
+      "maximumWeightLb": 17
+    },
+    {
+      "normalizedId": "flathead-catfish",
+      "displayName": "Flathead Catfish",
+      "maximumWeightLb": 123
+    },
+    {
+      "normalizedId": "flathead-grey-mullet",
+      "displayName": "Flathead Grey Mullet",
+      "maximumWeightLb": 20
+    },
+    {
+      "normalizedId": "florida-bass",
+      "displayName": "Florida Bass",
+      "maximumWeightLb": 22.5
+    },
+    {
+      "normalizedId": "florida-gar",
+      "displayName": "Florida Gar",
+      "maximumWeightLb": 21
+    },
+    {
+      "normalizedId": "florida-pompano",
+      "displayName": "Florida Pompano",
+      "maximumWeightLb": 8.5
+    },
+    {
+      "normalizedId": "fourbeard-rockling",
+      "displayName": "Fourbeard Rockling",
+      "maximumWeightLb": null
+    },
+    {
+      "normalizedId": "freshwater-bream",
+      "displayName": "Freshwater Bream",
+      "maximumWeightLb": 13
+    },
+    {
+      "normalizedId": "freshwater-drum",
+      "displayName": "Freshwater Drum",
+      "maximumWeightLb": 54.5
+    },
+    {
+      "normalizedId": "gafftopsail-catfish",
+      "displayName": "Gafftopsail Catfish",
+      "maximumWeightLb": 9.5
+    },
+    {
+      "normalizedId": "gag-grouper",
+      "displayName": "Gag Grouper",
+      "maximumWeightLb": 80.5
+    },
+    {
+      "normalizedId": "giant-biwa-catfish",
+      "displayName": "Giant Biwa Catfish",
+      "maximumWeightLb": 38
+    },
+    {
+      "normalizedId": "giant-trevally",
+      "displayName": "Giant Trevally",
+      "maximumWeightLb": 176.5
+    },
+    {
+      "normalizedId": "gilded-catfish",
+      "displayName": "Gilded Catfish",
+      "maximumWeightLb": 110
+    },
+    {
+      "normalizedId": "gilthead-seabream",
+      "displayName": "Gilthead Seabream",
+      "maximumWeightLb": 38
+    },
+    {
+      "normalizedId": "giraffe-catfish",
+      "displayName": "Giraffe Catfish",
+      "maximumWeightLb": null
+    },
+    {
+      "normalizedId": "golden-dorado",
+      "displayName": "Golden Dorado",
+      "maximumWeightLb": 69
+    },
+    {
+      "normalizedId": "golden-perch",
+      "displayName": "Golden Perch",
+      "maximumWeightLb": 53
+    },
+    {
+      "normalizedId": "golden-redfish",
+      "displayName": "Golden Redfish",
+      "maximumWeightLb": null
+    },
+    {
+      "normalizedId": "golden-trevally",
+      "displayName": "Golden Trevally",
+      "maximumWeightLb": 33
+    },
+    {
+      "normalizedId": "goliath-grouper",
+      "displayName": "Goliath Grouper",
+      "maximumWeightLb": 1003
+    },
+    {
+      "normalizedId": "grass-carp",
+      "displayName": "Grass Carp",
+      "maximumWeightLb": 99
+    },
+    {
+      "normalizedId": "grass-pickerel",
+      "displayName": "Grass Pickerel",
+      "maximumWeightLb": 2
+    },
+    {
+      "normalizedId": "gray-reef-shark",
+      "displayName": "Gray Reef Shark",
+      "maximumWeightLb": 74.5
+    },
+    {
+      "normalizedId": "greasy-grouper",
+      "displayName": "Greasy Grouper",
+      "maximumWeightLb": 32
+    },
+    {
+      "normalizedId": "great-barracuda",
+      "displayName": "Great Barracuda",
+      "maximumWeightLb": 110
+    },
+    {
+      "normalizedId": "great-hammerhead",
+      "displayName": "Great Hammerhead",
+      "maximumWeightLb": 991
+    },
+    {
+      "normalizedId": "great-northern-tilefish",
+      "displayName": "Great Northern Tilefish",
+      "maximumWeightLb": 66
+    },
+    {
+      "normalizedId": "greater-amberjack",
+      "displayName": "Greater Amberjack",
+      "maximumWeightLb": 177.5
+    },
+    {
+      "normalizedId": "greater-weaver",
+      "displayName": "Greater Weaver",
+      "maximumWeightLb": 4
+    },
+    {
+      "normalizedId": "green-sunfish",
+      "displayName": "Green Sunfish",
+      "maximumWeightLb": 2
+    },
+    {
+      "normalizedId": "greenland-halibut",
+      "displayName": "Greenland Halibut",
+      "maximumWeightLb": null
+    },
+    {
+      "normalizedId": "greenland-shark",
+      "displayName": "Greenland Shark",
+      "maximumWeightLb": null
+    },
+    {
+      "normalizedId": "haddock",
+      "displayName": "Haddock",
+      "maximumWeightLb": 37
+    },
+    {
+      "normalizedId": "hasu",
+      "displayName": "Hasu",
+      "maximumWeightLb": 1.5
+    },
+    {
+      "normalizedId": "hawaiian-pigfish",
+      "displayName": "Hawaiian Pigfish",
+      "maximumWeightLb": 3
+    },
+    {
+      "normalizedId": "hogfish",
+      "displayName": "Hogfish",
+      "maximumWeightLb": 24.5
+    },
+    {
+      "normalizedId": "huchen",
+      "displayName": "Huchen",
+      "maximumWeightLb": 114.5
+    },
+    {
+      "normalizedId": "humphead-wrasse",
+      "displayName": "Humphead Wrasse",
+      "maximumWeightLb": 421
+    },
+    {
+      "normalizedId": "inconnu",
+      "displayName": "Inconnu",
+      "maximumWeightLb": 65
+    },
+    {
+      "normalizedId": "indo-pacific-sailfish",
+      "displayName": "Indo-Pacific Sailfish",
+      "maximumWeightLb": 221
+    },
+    {
+      "normalizedId": "jacunda",
+      "displayName": "Jacunda",
+      "maximumWeightLb": 0.5
+    },
+    {
+      "normalizedId": "japanese-white-crucian-carp",
+      "displayName": "Japanese White Crucian Carp",
+      "maximumWeightLb": 7
+    },
+    {
+      "normalizedId": "jatuarana",
+      "displayName": "Jatuarana",
+      "maximumWeightLb": 4
+    },
+    {
+      "normalizedId": "john-dory",
+      "displayName": "John Dory",
+      "maximumWeightLb": 17.5
+    },
+    {
+      "normalizedId": "kawakawa",
+      "displayName": "Kawakawa",
+      "maximumWeightLb": 31
+    },
+    {
+      "normalizedId": "king-mackerel",
+      "displayName": "King Mackerel",
+      "maximumWeightLb": 99
+    },
+    {
+      "normalizedId": "king-salmon",
+      "displayName": "King Salmon",
+      "maximumWeightLb": 135.5
+    },
+    {
+      "normalizedId": "king-threadfin",
+      "displayName": "King Threadfin",
+      "maximumWeightLb": 99
+    },
+    {
+      "normalizedId": "kirikuchi-char",
+      "displayName": "Kirikuchi Char",
+      "maximumWeightLb": 33
+    },
+    {
+      "normalizedId": "kohaku-koi",
+      "displayName": "Kohaku Koi",
+      "maximumWeightLb": null
+    },
+    {
+      "normalizedId": "kunimasu-salmon",
+      "displayName": "Kunimasu Salmon",
+      "maximumWeightLb": 0.5
+    },
+    {
+      "normalizedId": "lake-sturgeon",
+      "displayName": "Lake Sturgeon",
+      "maximumWeightLb": 275.5
+    },
+    {
+      "normalizedId": "lake-trout",
+      "displayName": "Lake Trout",
+      "maximumWeightLb": 72
+    },
+    {
+      "normalizedId": "lake-whitefish",
+      "displayName": "Lake Whitefish",
+      "maximumWeightLb": 42
+    },
+    {
+      "normalizedId": "lane-snapper",
+      "displayName": "Lane Snapper",
+      "maximumWeightLb": 7.5
+    },
+    {
+      "normalizedId": "largemouth-bass",
+      "displayName": "Largemouth Bass",
+      "maximumWeightLb": 22.5
+    },
+    {
+      "normalizedId": "leerfish",
+      "displayName": "Leerfish",
+      "maximumWeightLb": 110
+    },
+    {
+      "normalizedId": "leopard-catfish",
+      "displayName": "Leopard Catfish",
+      "maximumWeightLb": 26.5
+    },
+    {
+      "normalizedId": "longear-sunfish",
+      "displayName": "Longear Sunfish",
+      "maximumWeightLb": 1.5
+    },
+    {
+      "normalizedId": "longnose-gar",
+      "displayName": "Longnose Gar",
+      "maximumWeightLb": 50.5
+    },
+    {
+      "normalizedId": "longtail-tuna",
+      "displayName": "Longtail Tuna",
+      "maximumWeightLb": 79
+    },
+    {
+      "normalizedId": "lumpfish",
+      "displayName": "Lumpfish",
+      "maximumWeightLb": null
+    },
+    {
+      "normalizedId": "macquarie-perch",
+      "displayName": "Macquarie Perch",
+      "maximumWeightLb": 7.5
+    },
+    {
+      "normalizedId": "mahi-mahi",
+      "displayName": "Mahi Mahi",
+      "maximumWeightLb": 88
+    },
+    {
+      "normalizedId": "malabar-blood-snapper",
+      "displayName": "Malabar Blood Snapper",
+      "maximumWeightLb": 17.5
+    },
+    {
+      "normalizedId": "mango-tilapia",
+      "displayName": "Mango Tilapia",
+      "maximumWeightLb": null
+    },
+    {
+      "normalizedId": "mangrove-red-snapper",
+      "displayName": "Mangrove Red Snapper",
+      "maximumWeightLb": 19
+    },
+    {
+      "normalizedId": "mangrove-snapper",
+      "displayName": "Mangrove Snapper",
+      "maximumWeightLb": 44
+    },
+    {
+      "normalizedId": "marbled-lungfish",
+      "displayName": "Marbled Lungfish",
+      "maximumWeightLb": null
+    },
+    {
+      "normalizedId": "masu-salmon",
+      "displayName": "Masu Salmon",
+      "maximumWeightLb": 22
+    },
+    {
+      "normalizedId": "matrinxa",
+      "displayName": "Matrinxa",
+      "maximumWeightLb": 6
+    },
+    {
+      "normalizedId": "meagre",
+      "displayName": "Meagre",
+      "maximumWeightLb": 227
+    },
+    {
+      "normalizedId": "meanmouth-bass",
+      "displayName": "Meanmouth Bass",
+      "maximumWeightLb": null
+    },
+    {
+      "normalizedId": "mediterranean-moray",
+      "displayName": "Mediterranean Moray",
+      "maximumWeightLb": 14.5
+    },
+    {
+      "normalizedId": "mediterranean-spearfish",
+      "displayName": "Mediterranean Spearfish",
+      "maximumWeightLb": 154.5
+    },
+    {
+      "normalizedId": "misty-grouper",
+      "displayName": "Misty Grouper",
+      "maximumWeightLb": 236
+    },
+    {
+      "normalizedId": "moorish-idol",
+      "displayName": "Moorish Idol",
+      "maximumWeightLb": 0.5
+    },
+    {
+      "normalizedId": "murray-cod",
+      "displayName": "Murray Cod",
+      "maximumWeightLb": 250
+    },
+    {
+      "normalizedId": "muskellunge",
+      "displayName": "Muskellunge",
+      "maximumWeightLb": 70
+    },
+    {
+      "normalizedId": "mutton-snapper",
+      "displayName": "Mutton Snapper",
+      "maximumWeightLb": 34.5
+    },
+    {
+      "normalizedId": "nile-barb",
+      "displayName": "Nile Barb",
+      "maximumWeightLb": null
+    },
+    {
+      "normalizedId": "nile-bichir",
+      "displayName": "Nile Bichir",
+      "maximumWeightLb": null
+    },
+    {
+      "normalizedId": "nile-crocodile",
+      "displayName": "Nile Crocodile",
+      "maximumWeightLb": null
+    },
+    {
+      "normalizedId": "nile-perch",
+      "displayName": "Nile Perch",
+      "maximumWeightLb": null
+    },
+    {
+      "normalizedId": "nile-tilapia",
+      "displayName": "Nile Tilapia",
+      "maximumWeightLb": null
+    },
+    {
+      "normalizedId": "northern-pike",
+      "displayName": "Northern Pike",
+      "maximumWeightLb": 77
+    },
+    {
+      "normalizedId": "northern-wolffish",
+      "displayName": "Northern Wolffish",
+      "maximumWeightLb": null
+    },
+    {
+      "normalizedId": "norway-pout",
+      "displayName": "Norway Pout",
+      "maximumWeightLb": null
+    },
+    {
+      "normalizedId": "nurse-shark",
+      "displayName": "Nurse Shark",
+      "maximumWeightLb": 241.5
+    },
+    {
+      "normalizedId": "obscure-snakehead",
+      "displayName": "Obscure Snakehead",
+      "maximumWeightLb": null
+    },
+    {
+      "normalizedId": "oceanic-whitetip-shark",
+      "displayName": "Oceanic Whitetip Shark",
+      "maximumWeightLb": 369
+    },
+    {
+      "normalizedId": "ocellate-river-stingray",
+      "displayName": "Ocellate River Stingray",
+      "maximumWeightLb": 75.5
+    },
+    {
+      "normalizedId": "opah",
+      "displayName": "Opah",
+      "maximumWeightLb": null
+    },
+    {
+      "normalizedId": "orangemouth-lizardfish",
+      "displayName": "Orangemouth Lizardfish",
+      "maximumWeightLb": 0.5
+    },
+    {
+      "normalizedId": "oscar",
+      "displayName": "Oscar",
+      "maximumWeightLb": 3.5
+    },
+    {
+      "normalizedId": "painted-comber",
+      "displayName": "Painted Comber",
+      "maximumWeightLb": 1
+    },
+    {
+      "normalizedId": "payara",
+      "displayName": "Payara",
+      "maximumWeightLb": 39
+    },
+    {
+      "normalizedId": "permit",
+      "displayName": "Permit",
+      "maximumWeightLb": 79.5
+    },
+    {
+      "normalizedId": "pike-eel",
+      "displayName": "Pike Eel",
+      "maximumWeightLb": 138.5
+    },
+    {
+      "normalizedId": "pink-salmon",
+      "displayName": "Pink Salmon",
+      "maximumWeightLb": 15
+    },
+    {
+      "normalizedId": "piraiba",
+      "displayName": "Piraiba",
+      "maximumWeightLb": 441
+    },
+    {
+      "normalizedId": "pollock",
+      "displayName": "Pollock",
+      "maximumWeightLb": 70.5
+    },
+    {
+      "normalizedId": "porbeagle-shark",
+      "displayName": "Porbeagle Shark",
+      "maximumWeightLb": 507
+    },
+    {
+      "normalizedId": "potato-grouper",
+      "displayName": "Potato Grouper",
+      "maximumWeightLb": 242.5
+    },
+    {
+      "normalizedId": "pumpkinseed",
+      "displayName": "Pumpkinseed",
+      "maximumWeightLb": 1.5
+    },
+    {
+      "normalizedId": "queensland-grouper",
+      "displayName": "Queensland Grouper",
+      "maximumWeightLb": 882
+    },
+    {
+      "normalizedId": "raccoon-butterflyfish",
+      "displayName": "Raccoon Butterflyfish",
+      "maximumWeightLb": 0.5
+    },
+    {
+      "normalizedId": "rainbow-runner",
+      "displayName": "Rainbow Runner",
+      "maximumWeightLb": 102
+    },
+    {
+      "normalizedId": "rainbow-trout",
+      "displayName": "Rainbow Trout",
+      "maximumWeightLb": 56
+    },
+    {
+      "normalizedId": "rainbow-wrasse",
+      "displayName": "Rainbow Wrasse",
+      "maximumWeightLb": 0.5
+    },
+    {
+      "normalizedId": "raspy-river-stingray",
+      "displayName": "Raspy River Stingray",
+      "maximumWeightLb": 33
+    },
+    {
+      "normalizedId": "red-bellied-piranha",
+      "displayName": "Red-bellied Piranha",
+      "maximumWeightLb": 8.5
+    },
+    {
+      "normalizedId": "red-drum",
+      "displayName": "Red Drum",
+      "maximumWeightLb": 99
+    },
+    {
+      "normalizedId": "red-emperor",
+      "displayName": "Red Emperor",
+      "maximumWeightLb": 72
+    },
+    {
+      "normalizedId": "red-grouper",
+      "displayName": "Red Grouper",
+      "maximumWeightLb": 50.5
+    },
+    {
+      "normalizedId": "red-mullet",
+      "displayName": "Red Mullet",
+      "maximumWeightLb": 1.5
+    },
+    {
+      "normalizedId": "red-porgy",
+      "displayName": "Red Porgy",
+      "maximumWeightLb": 17
+    },
+    {
+      "normalizedId": "red-scorpionfish",
+      "displayName": "Red Scorpionfish",
+      "maximumWeightLb": 6.5
+    },
+    {
+      "normalizedId": "red-snapper",
+      "displayName": "Red Snapper",
+      "maximumWeightLb": 50.5
+    },
+    {
+      "normalizedId": "red-spotted-masu-salmon",
+      "displayName": "Red-spotted Masu Salmon",
+      "maximumWeightLb": 11
+    },
+    {
+      "normalizedId": "redbelly-tilapia",
+      "displayName": "Redbelly Tilapia",
+      "maximumWeightLb": null
+    },
+    {
+      "normalizedId": "redear-sunfish",
+      "displayName": "Redear Sunfish",
+      "maximumWeightLb": 0.5
+    },
+    {
+      "normalizedId": "redeye-piranha",
+      "displayName": "Redeye Piranha",
+      "maximumWeightLb": 8.5
+    },
+    {
+      "normalizedId": "redfin-pickerel",
+      "displayName": "Redfin Pickerel",
+      "maximumWeightLb": 2
+    },
+    {
+      "normalizedId": "redtail-catfish",
+      "displayName": "Redtail Catfish",
+      "maximumWeightLb": 97.5
+    },
+    {
+      "normalizedId": "reef-manta-ray",
+      "displayName": "Reef Manta Ray",
+      "maximumWeightLb": 1195
+    },
+    {
+      "normalizedId": "reef-triggerfish",
+      "displayName": "Reef Triggerfish",
+      "maximumWeightLb": 1
+    },
+    {
+      "normalizedId": "rendahl-s-tandan",
+      "displayName": "Rendahl's Tandan",
+      "maximumWeightLb": 0.5
+    },
+    {
+      "normalizedId": "ripsaw-catfish",
+      "displayName": "Ripsaw Catfish",
+      "maximumWeightLb": 29
+    },
+    {
+      "normalizedId": "river-blackfish",
+      "displayName": "River Blackfish",
+      "maximumWeightLb": 5
+    },
+    {
+      "normalizedId": "roach",
+      "displayName": "Roach",
+      "maximumWeightLb": 1.5
+    },
+    {
+      "normalizedId": "rock-catfish",
+      "displayName": "Rock Catfish",
+      "maximumWeightLb": 3.5
+    },
+    {
+      "normalizedId": "round-crucian-carp",
+      "displayName": "Round Crucian Carp",
+      "maximumWeightLb": 7
+    },
+    {
+      "normalizedId": "ruddy-bowfin",
+      "displayName": "Ruddy Bowfin",
+      "maximumWeightLb": 21.5
+    },
+    {
+      "normalizedId": "russell-s-snapper",
+      "displayName": "Russell's Snapper",
+      "maximumWeightLb": 3.5
+    },
+    {
+      "normalizedId": "rusty-jobfish",
+      "displayName": "Rusty Jobfish",
+      "maximumWeightLb": 25
+    },
+    {
+      "normalizedId": "saddled-seabream",
+      "displayName": "Saddled Seabream",
+      "maximumWeightLb": 1
+    },
+    {
+      "normalizedId": "saithe",
+      "displayName": "Saithe",
+      "maximumWeightLb": null
+    },
+    {
+      "normalizedId": "sand-tiger-shark",
+      "displayName": "Sand Tiger Shark",
+      "maximumWeightLb": 350
+    },
+    {
+      "normalizedId": "sauger",
+      "displayName": "Sauger",
+      "maximumWeightLb": 9
+    },
+    {
+      "normalizedId": "saugeye",
+      "displayName": "Saugeye",
+      "maximumWeightLb": 14
+    },
+    {
+      "normalizedId": "scamp-grouper",
+      "displayName": "Scamp Grouper",
+      "maximumWeightLb": 31.5
+    },
+    {
+      "normalizedId": "schoolmaster-snapper",
+      "displayName": "Schoolmaster Snapper",
+      "maximumWeightLb": 90
+    },
+    {
+      "normalizedId": "sevruga-sturgeon",
+      "displayName": "Sevruga Sturgeon",
+      "maximumWeightLb": 176.5
+    },
+    {
+      "normalizedId": "sharpsnout-seabream",
+      "displayName": "Sharpsnout Seabream",
+      "maximumWeightLb": 4
+    },
+    {
+      "normalizedId": "sheepshead",
+      "displayName": "Sheepshead",
+      "maximumWeightLb": 21
+    },
+    {
+      "normalizedId": "shoal-bass",
+      "displayName": "Shoal Bass",
+      "maximumWeightLb": 9
+    },
+    {
+      "normalizedId": "short-finned-eel",
+      "displayName": "Short-finned Eel",
+      "maximumWeightLb": 16.5
+    },
+    {
+      "normalizedId": "shortbill-spearfish",
+      "displayName": "Shortbill Spearfish",
+      "maximumWeightLb": 114.5
+    },
+    {
+      "normalizedId": "shortfin-mako-shark",
+      "displayName": "Shortfin Mako Shark",
+      "maximumWeightLb": 1115
+    },
+    {
+      "normalizedId": "shovelnose-sturgeon",
+      "displayName": "Shovelnose Sturgeon",
+      "maximumWeightLb": 11
+    },
+    {
+      "normalizedId": "showa-koi",
+      "displayName": "Showa Koi",
+      "maximumWeightLb": null
+    },
+    {
+      "normalizedId": "sichel",
+      "displayName": "Sichel",
+      "maximumWeightLb": 4.5
+    },
+    {
+      "normalizedId": "sicklefin-lemon-shark",
+      "displayName": "Sicklefin Lemon Shark",
+      "maximumWeightLb": 900
+    },
+    {
+      "normalizedId": "silver-arowana",
+      "displayName": "Silver Arowana",
+      "maximumWeightLb": 13
+    },
+    {
+      "normalizedId": "silver-drum",
+      "displayName": "Silver Drum",
+      "maximumWeightLb": 10
+    },
+    {
+      "normalizedId": "silver-perch",
+      "displayName": "Silver Perch",
+      "maximumWeightLb": 3.5
+    },
+    {
+      "normalizedId": "silver-piranha",
+      "displayName": "Silver Piranha",
+      "maximumWeightLb": 5.5
+    },
+    {
+      "normalizedId": "silver-tandan",
+      "displayName": "Silver Tandan",
+      "maximumWeightLb": 0.5
+    },
+    {
+      "normalizedId": "silvertip-shark",
+      "displayName": "Silvertip Shark",
+      "maximumWeightLb": 357.5
+    },
+    {
+      "normalizedId": "skipjack-tuna",
+      "displayName": "Skipjack Tuna",
+      "maximumWeightLb": 76
+    },
+    {
+      "normalizedId": "slopehead-catfish",
+      "displayName": "Slopehead Catfish",
+      "maximumWeightLb": 7
+    },
+    {
+      "normalizedId": "smallmouth-bass",
+      "displayName": "Smallmouth Bass",
+      "maximumWeightLb": 12
+    },
+    {
+      "normalizedId": "smallmouth-buffalo",
+      "displayName": "Smallmouth Buffalo",
+      "maximumWeightLb": 82
+    },
+    {
+      "normalizedId": "smalltooth-sawfish",
+      "displayName": "Smalltooth Sawfish",
+      "maximumWeightLb": 771.5
+    },
+    {
+      "normalizedId": "smooth-back-river-stingray",
+      "displayName": "Smooth Back River Stingray",
+      "maximumWeightLb": 3
+    },
+    {
+      "normalizedId": "snowy-grouper",
+      "displayName": "Snowy Grouper",
+      "maximumWeightLb": 66
+    },
+    {
+      "normalizedId": "sockeye-salmon",
+      "displayName": "Sockeye Salmon",
+      "maximumWeightLb": 17
+    },
+    {
+      "normalizedId": "sorubim-catfish",
+      "displayName": "Sorubim Catfish",
+      "maximumWeightLb": 37.5
+    },
+    {
+      "normalizedId": "southern-bluefin-tuna",
+      "displayName": "Southern Bluefin Tuna",
+      "maximumWeightLb": 573
+    },
+    {
+      "normalizedId": "southern-flounder",
+      "displayName": "Southern Flounder",
+      "maximumWeightLb": 20.5
+    },
+    {
+      "normalizedId": "spangled-perch",
+      "displayName": "Spangled Perch",
+      "maximumWeightLb": 1
+    },
+    {
+      "normalizedId": "spanish-ling",
+      "displayName": "Spanish Ling",
+      "maximumWeightLb": 6.5
+    },
+    {
+      "normalizedId": "spanish-mackerel",
+      "displayName": "Spanish Mackerel",
+      "maximumWeightLb": 13
+    },
+    {
+      "normalizedId": "speckled-hind-grouper",
+      "displayName": "Speckled Hind Grouper",
+      "maximumWeightLb": 66
+    },
+    {
+      "normalizedId": "speckled-longfin-eel",
+      "displayName": "Speckled Longfin Eel",
+      "maximumWeightLb": 48.5
+    },
+    {
+      "normalizedId": "speckled-peacock-bass",
+      "displayName": "Speckled Peacock Bass",
+      "maximumWeightLb": 27
+    },
+    {
+      "normalizedId": "spotfin-flyingfish",
+      "displayName": "Spotfin Flyingfish",
+      "maximumWeightLb": 0.5
+    },
+    {
+      "normalizedId": "spotted-bass",
+      "displayName": "Spotted Bass",
+      "maximumWeightLb": 10.5
+    },
+    {
+      "normalizedId": "spotted-eagleray",
+      "displayName": "Spotted Eagleray",
+      "maximumWeightLb": 507
+    },
+    {
+      "normalizedId": "spotted-gar",
+      "displayName": "Spotted Gar",
+      "maximumWeightLb": 9.5
+    },
+    {
+      "normalizedId": "spotted-seatrout",
+      "displayName": "Spotted Seatrout",
+      "maximumWeightLb": 17.5
+    },
+    {
+      "normalizedId": "spotted-sunfish",
+      "displayName": "Spotted Sunfish",
+      "maximumWeightLb": 0.5
+    },
+    {
+      "normalizedId": "spotted-wolffish",
+      "displayName": "Spotted Wolffish",
+      "maximumWeightLb": null
+    },
+    {
+      "normalizedId": "steelhead",
+      "displayName": "Steelhead",
+      "maximumWeightLb": 56
+    },
+    {
+      "normalizedId": "sterlet-sturgeon",
+      "displayName": "Sterlet Sturgeon",
+      "maximumWeightLb": 35.5
+    },
+    {
+      "normalizedId": "striped-bass",
+      "displayName": "Striped Bass",
+      "maximumWeightLb": 125.5
+    },
+    {
+      "normalizedId": "striped-marlin",
+      "displayName": "Striped Marlin",
+      "maximumWeightLb": 970
+    },
+    {
+      "normalizedId": "striped-red-mullet",
+      "displayName": "Striped Red Mullet",
+      "maximumWeightLb": 2
+    },
+    {
+      "normalizedId": "summer-flounder",
+      "displayName": "Summer Flounder",
+      "maximumWeightLb": 26.5
+    },
+    {
+      "normalizedId": "tambaqui",
+      "displayName": "Tambaqui",
+      "maximumWeightLb": 88
+    },
+    {
+      "normalizedId": "tancho-koi",
+      "displayName": "Tancho Koi",
+      "maximumWeightLb": null
+    },
+    {
+      "normalizedId": "tarpon",
+      "displayName": "Tarpon",
+      "maximumWeightLb": 355
+    },
+    {
+      "normalizedId": "tench",
+      "displayName": "Tench",
+      "maximumWeightLb": 16.5
+    },
+    {
+      "normalizedId": "thicklip-grey-mullet",
+      "displayName": "Thicklip Grey Mullet",
+      "maximumWeightLb": 10
+    },
+    {
+      "normalizedId": "three-spotted-aracu",
+      "displayName": "Three Spotted Aracu",
+      "maximumWeightLb": 4.5
+    },
+    {
+      "normalizedId": "tiger-muskellunge",
+      "displayName": "Tiger Muskellunge",
+      "maximumWeightLb": 30
+    },
+    {
+      "normalizedId": "tiger-shark",
+      "displayName": "Tiger Shark",
+      "maximumWeightLb": 1780
+    },
+    {
+      "normalizedId": "trahira",
+      "displayName": "Trahira",
+      "maximumWeightLb": 29
+    },
+    {
+      "normalizedId": "trout-cod",
+      "displayName": "Trout Cod",
+      "maximumWeightLb": 35.5
+    },
+    {
+      "normalizedId": "true-big-scale-tetra",
+      "displayName": "True Big-Scale Tetra",
+      "maximumWeightLb": null
+    },
+    {
+      "normalizedId": "turbot",
+      "displayName": "Turbot",
+      "maximumWeightLb": 55
+    },
+    {
+      "normalizedId": "two-banded-seabream",
+      "displayName": "Two-banded Seabream",
+      "maximumWeightLb": 3
+    },
+    {
+      "normalizedId": "two-spined-blackfish",
+      "displayName": "Two-spined Blackfish",
+      "maximumWeightLb": 1
+    },
+    {
+      "normalizedId": "vundu",
+      "displayName": "Vundu",
+      "maximumWeightLb": null
+    },
+    {
+      "normalizedId": "wahoo",
+      "displayName": "Wahoo",
+      "maximumWeightLb": 183
+    },
+    {
+      "normalizedId": "walleye",
+      "displayName": "Walleye",
+      "maximumWeightLb": 25
+    },
+    {
+      "normalizedId": "warmouth",
+      "displayName": "Warmouth",
+      "maximumWeightLb": 2.5
+    },
+    {
+      "normalizedId": "warsaw-grouper",
+      "displayName": "Warsaw Grouper",
+      "maximumWeightLb": 436.5
+    },
+    {
+      "normalizedId": "wels-catfish",
+      "displayName": "Wels Catfish",
+      "maximumWeightLb": 286.5
+    },
+    {
+      "normalizedId": "white-bass",
+      "displayName": "White Bass",
+      "maximumWeightLb": 7
+    },
+    {
+      "normalizedId": "white-bream",
+      "displayName": "White Bream",
+      "maximumWeightLb": 2
+    },
+    {
+      "normalizedId": "white-crappie",
+      "displayName": "White Crappie",
+      "maximumWeightLb": 5.5
+    },
+    {
+      "normalizedId": "white-grouper",
+      "displayName": "White Grouper",
+      "maximumWeightLb": 55
+    },
+    {
+      "normalizedId": "white-grunt",
+      "displayName": "White Grunt",
+      "maximumWeightLb": 9.5
+    },
+    {
+      "normalizedId": "white-perch",
+      "displayName": "White Perch",
+      "maximumWeightLb": 6
+    },
+    {
+      "normalizedId": "white-sucker",
+      "displayName": "White Sucker",
+      "maximumWeightLb": 6.5
+    },
+    {
+      "normalizedId": "whitespotted-char",
+      "displayName": "Whitespotted Char",
+      "maximumWeightLb": 33
+    },
+    {
+      "normalizedId": "whitespotted-filefish",
+      "displayName": "Whitespotted Filefish",
+      "maximumWeightLb": 2.5
+    },
+    {
+      "normalizedId": "whitetip-reef-shark",
+      "displayName": "Whitetip Reef Shark",
+      "maximumWeightLb": 40.5
+    },
+    {
+      "normalizedId": "whiting",
+      "displayName": "Whiting",
+      "maximumWeightLb": null
+    },
+    {
+      "normalizedId": "winter-flounder",
+      "displayName": "Winter Flounder",
+      "maximumWeightLb": 8
+    },
+    {
+      "normalizedId": "witch-flounder",
+      "displayName": "Witch Flounder",
+      "maximumWeightLb": null
+    },
+    {
+      "normalizedId": "wolffish",
+      "displayName": "Wolffish",
+      "maximumWeightLb": 52
+    },
+    {
+      "normalizedId": "yellow-bullhead-catfish",
+      "displayName": "Yellow Bullhead Catfish",
+      "maximumWeightLb": 4
+    },
+    {
+      "normalizedId": "yellow-jack",
+      "displayName": "Yellow Jack",
+      "maximumWeightLb": 31
+    },
+    {
+      "normalizedId": "yellow-perch",
+      "displayName": "Yellow Perch",
+      "maximumWeightLb": 4
+    },
+    {
+      "normalizedId": "yellow-tang",
+      "displayName": "Yellow Tang",
+      "maximumWeightLb": 0.5
+    },
+    {
+      "normalizedId": "yellowfin-goatfish",
+      "displayName": "Yellowfin Goatfish",
+      "maximumWeightLb": 2.5
+    },
+    {
+      "normalizedId": "yellowfin-grouper",
+      "displayName": "Yellowfin Grouper",
+      "maximumWeightLb": 41
+    },
+    {
+      "normalizedId": "yellowfin-tuna",
+      "displayName": "Yellowfin Tuna",
+      "maximumWeightLb": 441
+    },
+    {
+      "normalizedId": "yellowspotted-trevally",
+      "displayName": "Yellowspotted Trevally",
+      "maximumWeightLb": 39.5
+    },
+    {
+      "normalizedId": "yellowtail-snapper",
+      "displayName": "Yellowtail Snapper",
+      "maximumWeightLb": 9
+    },
+    {
+      "normalizedId": "zander",
+      "displayName": "Zander",
+      "maximumWeightLb": 44
+    }
+  ]
+}
